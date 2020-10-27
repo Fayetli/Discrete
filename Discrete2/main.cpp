@@ -11,16 +11,17 @@ public:
 	Binom(int n, double a, double b):n(n), a(a), b(b)  { }
 
 	void Output() {
+		std::cout << '(' << a << "*x + " << b << "*y)^" << n << '=' << std::endl;
 		for (int i = 0; i <= n; i++) {
 			OutputOne(n - i, i);
 			if(i != n)
-				std::cout << " + " << std::flush;
+				std::cout << " + " << std::endl;
 		}
-		std::cout << '=' << std::endl;
+		std::cout << " = " << std::endl;
 		for (int i = 0; i <= n; i++) {
 			std::cout << C(n, i) * std::pow(a, n - i) * std::pow(b, i) << "*x^" << n - i << "*y^" << i << std::flush;
 			if (i != n)
-				std::cout << " + " << std::flush;
+				std::cout << " + " << std::endl;
 		}
 		std::cout << std::endl;
 	}

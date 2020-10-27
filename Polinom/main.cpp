@@ -32,9 +32,9 @@ public:
 
 		for (int k = 0; k <= n; k++)
 		{
-			for (int l = 0; l <= n; l++)
+			for (int l = 0; l <= n - k; l++)
 			{
-				for (int m = 0; m <= n; m++)
+				for (int m = 0; m <= n - k - l; m++)
 				{
 					if ((k + l + m) == n)
 					{
